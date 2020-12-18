@@ -8,10 +8,10 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/value2"
         android:layout_width="135dp"
         android:layout_height="72dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="152dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:background="#256C72C6"
@@ -26,13 +26,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/result"
         android:layout_width="327dp"
         android:layout_height="72dp"
         android:layout_marginTop="60dp"
         android:background="#256C72C6"
         android:gravity="right|center_vertical"
-        android:hint="Output"
+        android:hint="Result"
         android:paddingRight="15sp"
         android:shadowColor="#000000"
         android:textColor="#A6B5E1"
@@ -40,93 +40,99 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/modulo" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/clear"
         android:layout_width="90dp"
         android:layout_height="70dp"
         android:layout_marginTop="28dp"
         android:background="#363A3F70"
-        android:text="^"
-        android:textSize="36sp"
+        android:onClick="clear"
+        android:text="AC"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.549"
-        app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintStart_toEndOf="@+id/modulo"
+        app:layout_constraintTop_toBottomOf="@+id/multiply" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/modulo"
         android:layout_width="90dp"
         android:layout_height="70dp"
         android:layout_marginTop="28dp"
         android:background="#363A3F70"
+        android:onClick="mod"
         android:text="%"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/minus" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/divide"
         android:layout_width="90dp"
         android:layout_height="70dp"
         android:layout_marginTop="28dp"
         android:background="#363A3F70"
+        android:onClick="div"
         android:text="/"
         android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/minus"
         app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/plus" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/multiply"
         android:layout_width="90dp"
         android:layout_height="70dp"
         android:layout_marginTop="60dp"
         android:background="#363A3F70"
+        android:onClick="mul"
         android:text="*"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.549"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintStart_toEndOf="@+id/minus"
+        app:layout_constraintTop_toBottomOf="@+id/value1" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/minus"
         android:layout_width="90dp"
         android:layout_height="70dp"
         android:layout_marginTop="60dp"
         android:background="#363A3F70"
+        android:onClick="sub"
         android:text="-"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/value1" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/plus"
         android:layout_width="90dp"
         android:layout_height="70dp"
         android:layout_marginTop="60dp"
         android:background="#363A3F70"
+        android:onClick="add"
         android:text="+"
         android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/minus"
         app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/value1" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/value1"
         android:layout_width="135dp"
         android:layout_height="72dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="152dp"
         android:background="#256C72C6"
         android:ems="10"
         android:gravity="center"
@@ -142,13 +148,13 @@
         android:id="@+id/textView4"
         android:layout_width="344dp"
         android:layout_height="57dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="56dp"
         android:gravity="center"
         android:text="Enter Values Here"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
